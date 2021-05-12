@@ -9,11 +9,11 @@ public class App {
     public static class PrimeCounter implements Runnable {
         @Override
         public void run() {
-            float startingTime = System.currentTimeMillis();
+            double startingTime = System.currentTimeMillis();
             int primeCounter = countPrimes(1, MAX);
-            float finishingTime = System.currentTimeMillis();
-            float executionTime = (finishingTime - startingTime) / 100;
-            System.out.println(Thread.currentThread().getName() + " counted " + primeCounter + "prime numbers in " + executionTime + "seconds.");
+            double finishingTime = System.currentTimeMillis();
+            double executionTime = (finishingTime - startingTime) / 1000;
+            System.out.println(Thread.currentThread().getName() + " counted " + primeCounter + " prime numbers in " + executionTime + "seconds.");
         }
     }
 
@@ -42,7 +42,7 @@ public class App {
             threadArray[i] = new Thread(new PrimeCounter());
             threadArray[i].start();
         }
-   }
+    }
 
     // This methods counts the number of primes in the range min to max
     private static int countPrimes(int min, int max) {

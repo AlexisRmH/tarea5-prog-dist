@@ -1,2 +1,2 @@
-mx/ucol/threads/App$CountPrimesThread.class
-mx/ucol/threads/App.class
+mx\ucol\threads\App.class
+mx\ucol\threads\App$PrimeCounter.class
